@@ -17,7 +17,6 @@ trait Uuidable
      */
     public static function bootUuidable()
     {
-        var_dump('bootUuidable');
         static::creating(function($obj) {
 
             if (empty($obj->uuid) || static::findByUuid($obj->uuid)) {
